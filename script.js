@@ -1,9 +1,5 @@
 // script.js
 // HealthCare Portal - frontend functionality (no backend)
-// - Dynamic dashboard numbers
-// - Patients CSV export
-// - Download patient & department reports
-// - Navbar live search
 
 // ---------- Global patient records ----------
 let patientRecords = [];
@@ -84,7 +80,6 @@ function initPatientRecords() {
     return;
   }
 
-  // If no storage, read initial demo rows from table
   const tbody = document.querySelector("#patients-table tbody");
   if (!tbody) return;
 
@@ -124,8 +119,9 @@ function renderPatientsTable() {
     const tr = document.createElement("tr");
 
     let statusClass = "status-stable";
-    if (p.status.toLowerCase().includes("review")) statusClass = "status-review";
-    if (p.status.toLowerCase().includes("critical")) statusClass = "status-critical";
+    const lower = p.status.toLowerCase();
+    if (lower.includes("review")) statusClass = "status-review";
+    if (lower.includes("critical")) statusClass = "status-critical";
 
     tr.innerHTML = `
       <td>${p.name}</td>
@@ -161,7 +157,7 @@ function updateDashboardStats() {
       .map((p) => p.doctor)
       .filter((d) => d && d !== "N/A")
   );
-  const activeDoctors = doctorSet.size || 4; // fallback demo value
+  const activeDoctors = doctorSet.size || 4;
 
   if (totalEl) totalEl.textContent = total;
   if (todayEl) todayEl.textContent = registeredToday;
@@ -247,6 +243,18 @@ function attachNavbarSearch() {
       row.style.display = text.includes(term) ? "" : "none";
     });
   }
+}
+
+// ---------- Hamburger Toggle ----------
+function attachHamburger() {
+  const toggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  if (!toggle || !navLinks) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
 }
 
 // ---------- Home Page: Register New Patient ----------
@@ -493,6 +501,7 @@ function attachContactForm() {
 // ---------- Init ----------
 document.addEventListener("DOMContentLoaded", () => {
   initPatientRecords();
+  attachHamburger();
   attachNavbarSearch();
   attachPatientRegistration();
   attachDownloadPageActions();
