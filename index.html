@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthCare Portal | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">Health<span>Care</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="download.html">Download Report</a></li>
+          <li><a href="department.html">Department</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <form class="nav-search" id="nav-search-form">
+      <input
+        type="text"
+        placeholder="Search patients, doctors, departments..."
+        aria-label="Search"
+      />
+    </form>
+
+    <!-- SCROLLING DISEASES CURE TICKER -->
+    <div class="nav-ticker">
+      <div class="ticker-content">
+        ✅ Diabetes Care • ❤️ Hypertension Management • 🫁 Asthma Relief • 💊 Migraine Treatment • 
+        🦴 Arthritis Therapy • 🧠 Anxiety Support • 🩺 Cardiac Rehab • 🧬 Thyroid Balance • 
+        ✅ Diabetes Care • ❤️ Hypertension Management • 🫁 Asthma Relief • 💊 Migraine Treatment • 
+        🦴 Arthritis Therapy • 🧠 Anxiety Support • 🩺 Cardiac Rehab • 🧬 Thyroid Balance • 
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <section class="hero">
+      <div>
+        <h1>Patient Dashboard</h1>
+        <p>Monitor patients, manage doctors, and keep track of registrations in one clean interface.</p>
+      </div>
+      <div class="hero-stats">
+        <div class="badge">Live</div>
+        <span id="last-sync-text">Last synced: just now</span>
+      </div>
+    </section>
+
+    <!-- DASHBOARD CARDS -->
+    <section class="cards-grid">
+      <div class="card">
+        <h3>Total Patients</h3>
+        <p class="card-number" id="total-patients-count">0</p>
+        <p class="card-sub">All registered patients</p>
+      </div>
+      <div class="card">
+        <h3>Registered Today</h3>
+        <p class="card-number" id="registered-today-count">0</p>
+        <p class="card-sub">OPD & Online</p>
+      </div>
+      <div class="card">
+        <h3>Active Doctors</h3>
+        <p class="card-number" id="active-doctors-count">0</p>
+        <p class="card-sub">Across all departments</p>
+      </div>
+      <div class="card">
+        <h3>Pending Reports</h3>
+        <p class="card-number" id="pending-reports-count">0</p>
+        <p class="card-sub">Awaiting doctor review</p>
+      </div>
+    </section>
+
+    <!-- DASHBOARD LAYOUT -->
+    <section class="grid-2">
+      <!-- PATIENT LIST -->
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Registered Patients</h2>
+          <button class="btn ghost" id="scroll-patients-btn">View All</button>
+        </div>
+        <table class="table" id="patients-table">
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Age</th>
+              <th>Disease</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Initial demo rows; JS will read these and also re-render -->
+            <tr>
+              <td>Ankit Sharma</td>
+              <td>32</td>
+              <td>Diabetes</td>
+              <td><span class="status status-stable">Stable</span></td>
+            </tr>
+            <tr>
+              <td>Riya Verma</td>
+              <td>27</td>
+              <td>Asthma</td>
+              <td><span class="status status-review">Under Review</span></td>
+            </tr>
+            <tr>
+              <td>Mohit Singh</td>
+              <td>45</td>
+              <td>Hypertension</td>
+              <td><span class="status status-critical">Critical</span></td>
+            </tr>
+            <tr>
+              <td>Neha Gupta</td>
+              <td>29</td>
+              <td>Migraine</td>
+              <td><span class="status status-stable">Stable</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PATIENT REGISTRATION FORM -->
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Register New Patient</h2>
+        </div>
+        <form class="form" id="patient-form">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="patientName" placeholder="Enter patient name" required />
+          </div>
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" name="patientAge" placeholder="Age" min="0" required />
+          </div>
+          <div class="form-group">
+            <label>Disease</label>
+            <select name="patientDisease" required>
+              <option value="">Select disease</option>
+              <option>Diabetes</option>
+              <option>Hypertension</option>
+              <option>Asthma</option>
+              <option>Thyroid</option>
+              <option>Arthritis</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Assigned Doctor</label>
+            <select name="patientDoctor" required>
+              <option value="">Choose doctor</option>
+              <option>Dr. Mehta (Physician)</option>
+              <option>Dr. Arora (Cardiologist)</option>
+              <option>Dr. Rai (Pulmonologist)</option>
+              <option>Dr. Kapoor (Neurologist)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn primary full">Register Patient</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- DOCTOR PANEL -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Doctor Overview</h2>
+      </div>
+      <div class="doctor-grid">
+        <div class="doctor-card">
+          <h3>Dr. Rohan Mehta</h3>
+          <p>General Physician</p>
+          <p class="muted">Patients Today: 18</p>
+        </div>
+        <div class="doctor-card">
+          <h3>Dr. Simran Kaur</h3>
+          <p>Cardiologist</p>
+          <p class="muted">Patients Today: 12</p>
+        </div>
+        <div class="doctor-card">
+          <h3>Dr. Arjun Rai</h3>
+          <p>Pulmonologist</p>
+          <p class="muted">Patients Today: 9</p>
+        </div>
+        <div class="doctor-card">
+          <h3>Dr. Neha Kapoor</h3>
+          <p>Neurologist</p>
+          <p class="muted">Patients Today: 7</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>HealthCare Portal helps hospitals and clinics manage patients, doctors, and reports in a smart way.</p>
+      </div>
+      <div>
+        <h4>Rating</h4>
+        <p class="stars">★★★★★</p>
+        <p>4.8 / 5 based on 1,230 reviews</p>
+      </div>
+      <div>
+        <h4>Reviews</h4>
+        <p>“Very simple to use for staff and doctors.”</p>
+        <p>“Dashboard is clean and fast.”</p>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>HealthCare HQ, Sector 21</p>
+        <p>Lucknow, Uttar Pradesh, India</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 HealthCare Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

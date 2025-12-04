@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthCare Portal | Department</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">Health<span>Care</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="download.html">Download Report</a></li>
+          <li><a href="department.html" class="active">Department</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <form class="nav-search" id="nav-search-form">
+      <input
+        type="text"
+        placeholder="Search departments or doctors..."
+        aria-label="Search"
+      />
+    </form>
+
+    <div class="nav-ticker">
+      <div class="ticker-content">
+        Cardiology • Neurology • Orthopedics • General Medicine • Pediatrics • Oncology • Dermatology •
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero small">
+      <h1>Departments Overview</h1>
+      <p>View department performance, patient load, and key hospital statistics.</p>
+    </section>
+
+    <section class="cards-grid">
+      <div class="card">
+        <h3>Total Departments</h3>
+        <p class="card-number">12</p>
+        <p class="card-sub">Active hospital departments</p>
+      </div>
+      <div class="card">
+        <h3>Doctors On Duty</h3>
+        <p class="card-number">38</p>
+        <p class="card-sub">Across all departments</p>
+      </div>
+      <div class="card">
+        <h3>Patients Admitted</h3>
+        <p class="card-number">163</p>
+        <p class="card-sub">Current in-patient count</p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Department-wise Summary</h2>
+        </div>
+        <table class="table" id="departments-table">
+          <thead>
+            <tr>
+              <th>Department</th>
+              <th>Patients</th>
+              <th>Avg. Stay</th>
+              <th>Head of Dept.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cardiology</td>
+              <td>42</td>
+              <td>3.4 days</td>
+              <td>Dr. Simran Kaur</td>
+            </tr>
+            <tr>
+              <td>Neurology</td>
+              <td>26</td>
+              <td>4.1 days</td>
+              <td>Dr. Neha Kapoor</td>
+            </tr>
+            <tr>
+              <td>Orthopedics</td>
+              <td>31</td>
+              <td>2.8 days</td>
+              <td>Dr. Aman Verma</td>
+            </tr>
+            <tr>
+              <td>General Medicine</td>
+              <td>53</td>
+              <td>2.1 days</td>
+              <td>Dr. Rohan Mehta</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Create Department Report</h2>
+        </div>
+        <form class="form department-report-form">
+          <div class="form-group">
+            <label>Select Department</label>
+            <select name="departmentName">
+              <option>Cardiology</option>
+              <option>Neurology</option>
+              <option>Orthopedics</option>
+              <option>General Medicine</option>
+              <option>Pediatrics</option>
+              <option>Dermatology</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Date Range</label>
+            <div class="two-inputs">
+              <input type="date" />
+              <input type="date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Export Format</label>
+            <select>
+              <option>PDF</option>
+              <option>Excel</option>
+              <option>CSV</option>
+            </select>
+          </div>
+          <button type="submit" class="btn primary full">Generate Department Report</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Track performance and patient load across all departments in one place.</p>
+      </div>
+      <div>
+        <h4>Rating</h4>
+        <p class="stars">★★★★★</p>
+        <p>Helps management make better decisions.</p>
+      </div>
+      <div>
+        <h4>Reviews</h4>
+        <p>“Very useful department-wise breakdown.”</p>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>HealthCare HQ, Sector 21</p>
+        <p>Lucknow, Uttar Pradesh, India</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 HealthCare Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthCare Portal | Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">Health<span>Care</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="report.html" class="active">Report</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-ticker">
+      <div class="ticker-content">
+        Daily OPD Report • Monthly Patient Summary • Department-wise Statistics • Doctor-wise Performance •
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero small">
+      <h1>Reports & Analytics</h1>
+      <p>View hospital performance, patient trends, and doctor analytics.</p>
+    </section>
+
+    <section class="cards-grid">
+      <div class="card">
+        <h3>Today’s Patients</h3>
+        <p class="card-number">87</p>
+        <p class="card-sub">Across all departments</p>
+      </div>
+      <div class="card">
+        <h3>Avg. Waiting Time</h3>
+        <p class="card-number">18 min</p>
+        <p class="card-sub">Improved by 5 min</p>
+      </div>
+      <div class="card">
+        <h3>Discharge Today</h3>
+        <p class="card-number">26</p>
+        <p class="card-sub">Successfully treated</p>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Department-wise Report</h2>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Department</th>
+              <th>Patients</th>
+              <th>Avg. Stay</th>
+              <th>Discharge Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cardiology</td>
+              <td>42</td>
+              <td>3.4 days</td>
+              <td>92%</td>
+            </tr>
+            <tr>
+              <td>Neurology</td>
+              <td>26</td>
+              <td>4.1 days</td>
+              <td>88%</td>
+            </tr>
+            <tr>
+              <td>Orthopedics</td>
+              <td>31</td>
+              <td>2.8 days</td>
+              <td>95%</td>
+            </tr>
+            <tr>
+              <td>General Medicine</td>
+              <td>53</td>
+              <td>2.1 days</td>
+              <td>97%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Generate Custom Report</h2>
+        </div>
+        <form class="form">
+          <div class="form-group">
+            <label>Report Type</label>
+            <select>
+              <option>Daily Summary</option>
+              <option>Monthly Summary</option>
+              <option>Department-wise</option>
+              <option>Doctor-wise</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Date Range</label>
+            <div class="two-inputs">
+              <input type="date" />
+              <input type="date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Export Format</label>
+            <select>
+              <option>PDF</option>
+              <option>Excel</option>
+              <option>CSV</option>
+            </select>
+          </div>
+          <button type="submit" class="btn primary full">Generate Report</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Powerful visual reports for hospital decision-making.</p>
+      </div>
+      <div>
+        <h4>Rating</h4>
+        <p class="stars">★★★★★</p>
+        <p>Trusted by multiple clinics.</p>
+      </div>
+      <div>
+        <h4>Reviews</h4>
+        <p>“Helps us track performance and improve care.”</p>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>HealthCare HQ, Sector 21</p>
+        <p>Lucknow, Uttar Pradesh, India</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 HealthCare Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

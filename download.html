@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthCare Portal | Download</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">Health<span>Care</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="download.html" class="active">Download Report</a></li>
+          <li><a href="department.html">Department</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <form class="nav-search" id="nav-search-form">
+      <input
+        type="text"
+        placeholder="Search reports or patients..."
+        aria-label="Search"
+      />
+    </form>
+
+    <div class="nav-ticker">
+      <div class="ticker-content">
+        Download lab reports • Download prescription summary • Download discharge summary • Download visit history • 
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero small">
+      <h1>Download Patient Reports</h1>
+      <p>Quickly download lab results, prescriptions, and visit summaries.</p>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Search Patient</h2>
+        </div>
+        <form class="form download-search-form">
+          <div class="form-group">
+            <label>Patient ID</label>
+            <input type="text" name="searchPatientId" placeholder="e.g. PT-1023" required />
+          </div>
+          <div class="form-group">
+            <label>Patient Name</label>
+            <input type="text" name="searchPatientName" placeholder="Enter patient name" />
+          </div>
+          <div class="form-group">
+            <label>Date Range</label>
+            <div class="two-inputs">
+              <input type="date" />
+              <input type="date" />
+            </div>
+          </div>
+          <button type="submit" class="btn primary full">Search Records</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Available Downloads</h2>
+        </div>
+        <ul class="download-list">
+          <li>
+            <div>
+              <h3>Lab Report - Blood Test</h3>
+              <p class="muted">Patient: Ankit Sharma • 02 Dec 2025</p>
+            </div>
+            <button class="btn ghost-sm">Download</button>
+          </li>
+          <li>
+            <div>
+              <h3>Prescription - Hypertension</h3>
+              <p class="muted">Patient: Mohit Singh • 01 Dec 2025</p>
+            </div>
+            <button class="btn ghost-sm">Download</button>
+          </li>
+          <li>
+            <div>
+              <h3>Discharge Summary</h3>
+              <p class="muted">Patient: Riya Verma • 30 Nov 2025</p>
+            </div>
+            <button class="btn ghost-sm">Download</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Secure downloads for all patient-related medical documents.</p>
+      </div>
+      <div>
+        <h4>Rating</h4>
+        <p class="stars">★★★★★</p>
+        <p>Fast & reliable downloads.</p>
+      </div>
+      <div>
+        <h4>Reviews</h4>
+        <p>“Reports are easy to find and export.”</p>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>HealthCare HQ, Sector 21</p>
+        <p>Lucknow, Uttar Pradesh, India</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 HealthCare Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

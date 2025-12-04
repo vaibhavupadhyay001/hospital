@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HealthCare Portal | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo">Health<span>Care</span></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="download.html">Download Report</a></li>
+          <li><a href="department.html">Department</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- SEARCH BAR -->
+    <form class="nav-search" id="nav-search-form">
+      <input
+        type="text"
+        placeholder="Search help, support, FAQ..."
+        aria-label="Search"
+      />
+    </form>
+
+    <div class="nav-ticker">
+      <div class="ticker-content">
+        Support • Helpdesk • Feedback • Appointment Queries • Technical Issues •
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero small">
+      <h1>Contact & Support</h1>
+      <p>Have a question? Reach out to our support and admin team.</p>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Contact Form</h2>
+        </div>
+        <form class="form" id="contact-form">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select>
+              <option>General Query</option>
+              <option>Technical Issue</option>
+              <option>Billing / Payment</option>
+              <option>Feedback</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="Type your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn primary full">Send Message</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <h2>Location & Details</h2>
+        </div>
+        <div class="contact-info">
+          <p><strong>Address:</strong><br>HealthCare HQ, Sector 21, Lucknow, Uttar Pradesh, India</p>
+          <p><strong>Phone:</strong><br>+91-9876543210</p>
+          <p><strong>Email:</strong><br>support@healthcareportal.com</p>
+          <p><strong>Support Hours:</strong><br>Mon - Sat, 9:00 AM - 7:00 PM</p>
+          <div class="map-placeholder">
+            Map View / Hospital Location
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>We are here to support hospitals, clinics, and medical staff.</p>
+      </div>
+      <div>
+        <h4>Rating</h4>
+        <p class="stars">★★★★★</p>
+        <p>Users love our simple interface.</p>
+      </div>
+      <div>
+        <h4>Reviews</h4>
+        <p>“Support team responds very quickly.”</p>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>HealthCare HQ, Sector 21</p>
+        <p>Lucknow, Uttar Pradesh, India</p>
+      </div>
+    </div>
+    <p class="footer-bottom">© 2025 HealthCare Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
