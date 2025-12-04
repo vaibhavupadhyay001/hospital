@@ -2,7 +2,7 @@
   --bg: #f3f4f6;
   --bg-soft: #ffffff;
   --card: #ffffff;
-  --accent: #2563eb;        /* Medical blue */
+  --accent: #2563eb;
   --accent-soft: rgba(37, 99, 235, 0.08);
   --text: #111827;
   --muted: #6b7280;
@@ -67,6 +67,46 @@ body {
 }
 .logo span {
   color: var(--accent);
+}
+
+/* HAMBURGER BUTTON */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #4b5563;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.nav-toggle:hover {
+  background: #f3f4f6;
+  border-color: var(--accent);
+}
+
+/* Hamburger "X" state */
+.nav-links.nav-open ~ .nav-toggle span:nth-child(1),
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.nav-links.nav-open ~ .nav-toggle span:nth-child(2),
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-links.nav-open ~ .nav-toggle span:nth-child(3),
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .nav-links {
@@ -575,11 +615,27 @@ textarea {
   .nav-left {
     width: 100%;
     justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  nav {
+    width: 100%;
   }
 
   .nav-links {
-    gap: 1rem;
-    flex-wrap: wrap;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links.nav-open {
+    display: flex;
   }
 
   .nav-search {
